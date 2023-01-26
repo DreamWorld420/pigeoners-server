@@ -6,10 +6,6 @@ export type Middleware = (
 	next: NextFunction
 ) => void;
 
-export type Controller = {
-	[key: string]: Middleware;
-};
-
-export type AuthController = Controller & {
-	signup: Middleware;
+export type Controller<T> = {
+	[key in T]: Middleware;
 };
