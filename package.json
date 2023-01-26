@@ -22,7 +22,7 @@
 	"scripts": {
 		"start:dev": "yarn nodemon",
 		"build": "rimraf ./dist && tsc",
-		"start": "yarn run build && node ./dist/index.js"
+		"start": "yarn run build && node -r tsconfig-paths/register ./dist/index.js"
 	},
 	"dependencies": {}
 }
